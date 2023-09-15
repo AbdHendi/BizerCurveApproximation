@@ -16,7 +16,7 @@ def bernstein_polynomial_function(n, i, u):
     global factorial
     if len(factorial) < n:
         for j in range(factorial[-1], n + 1):
-            factorial.apppend(factorial[-1] * (factorial[-1] + 1))
+            factorial.append(factorial[-1] * (factorial[-1] + 1))
     if i > n:
         i = n - i
     return (factorial[n] / (factorial[n - i] * factorial[i])) * np.power(u, i) * np.power(1 - u, n - i)
